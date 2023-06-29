@@ -64,26 +64,30 @@ const LinkToQR = () => {
   }
 
   return (
-    <section className="bg-white rounded-xl shadow-lg p-8">
+    <section className="section-padding section__bg">
       <div className="justify-center text-center m-5">
-        <h2 className="text-3xl font-bold mb-10">Link to QR</h2>
+        <h2 className="text-5xl font-bold mb-10 text-center gradient__text">Link to QR</h2>
       </div>
 
-      <div className="w-64 h-64 mx-auto mb-8 rounded-xl shadow-lg m-10 border-blue-700 p-4">
+      <div className="p-5 bg-gray-50">
         <div ref={qrCodeRef}>
-          <QRCode value={text} />
+          <QRCode 
+          value={text} 
+          bgColor = "#FFFFFF"
+          fgColor = "#031b34"
+          />
         </div>
       </div>
 
       <div>
         <div className="grid grid-cols-1 m-5">
-          <label htmlFor="link-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label htmlFor="link-input" className="block mb-2 text-sm font-medium text-white dark:text-white">
             Enter Link:
           </label>
           <input
             type="website"
             id="link-input"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-100 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="www.example.com"
             onChange={handleChange}
           />

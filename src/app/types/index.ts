@@ -1,5 +1,7 @@
-import React, { ReactNode, MouseEventHandler, KeyboardEventHandler } from 'react';
+import React, { ReactNode, MouseEventHandler, KeyboardEventHandler, ChangeEvent } from 'react';
 import { StaticImageData } from 'next/image';
+
+
 
 export interface ToolCardProps{
     name:string, 
@@ -26,3 +28,11 @@ export interface HeroProps {
 
 }
 
+export interface UploadProps {
+    subtitle: string
+    handleDrop?: (event: React.DragEvent<HTMLDivElement>) => void
+    handleDragOver?: (event: React.DragEvent<HTMLDivElement>) => void
+    handleOnChange?: (event: ChangeEvent<HTMLInputElement>) => void
+    selectedFile?: File | null
+    fileType: string
+}

@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Toolselect',
-  description: 'Software tools to make your workflow better.',
+  title: 'Toolsik',
+  description: 'Discover a vast collection of powerful software tools and converters at Toolsik, providing seamless solutions for all your conversion needs.',
 }
 
 export default function RootLayout({
@@ -17,9 +17,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
-          {children}
+        <div className="gradient__bg">
+          <Navbar/>
+            {children}
+        </div>
+        
         <Footer/>
+        
       </body>
     </html>
   )

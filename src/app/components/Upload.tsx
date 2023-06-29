@@ -1,33 +1,21 @@
 "use client"
 
-import React, { useState } from 'react';
+import { UploadProps } from '../types';
 
-export interface UploadProps {
-  subtitle: string;
-}
 
-const Upload = ({ subtitle }: UploadProps) => {
-  const [selectedFile, setSelectedFile] = useState<string | null>(null);
+const Upload = ({ subtitle, handleDrop, handleDragOver,handleOnChange, selectedFile, fileType }: UploadProps) => {
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      setSelectedFile(file.name);
-    } else {
-      setSelectedFile(null);
-    }
-  };
 
   return (
     <div className="flex items-center justify-center w-full mt-4">
       <label
         htmlFor="dropzone-file"
-        className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
-      >
-        <div className="flex flex-col items-center justify-center pt-5 pb-6">
+        className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... hover:bg-slate-900"
+        >
+        <div onDrop={handleDrop} onDragOver={handleDragOver} className="flex flex-col items-center justify-center pt-5 pb-6"  >
           <svg
             aria-hidden="true"
-            className="w-10 h-10 mb-3 text-gray-400"
+            className="w-10 h-10 mb-3 text-white"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -41,12 +29,20 @@ const Upload = ({ subtitle }: UploadProps) => {
             ></path>
           </svg>
           <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-            <span className="font-semibold">Click to upload</span> or drag and drop
+            <span className="font-semibold text-white">
+            {selectedFile ? selectedFile.name : 'Click to upload or drag and drop'}
+            </span>
           </p>
-          <p className="text-xs text-gray-500 dark:text-gray-400">{subtitle}</p>
-          {selectedFile && <p className="text-xs text-gray-500 dark:text-gray-400">{selectedFile}</p>}
+          <p className="text-xs text-white dark:text-gray-400">{subtitle}</p>
+          {selectedFile && <p className="text-xs text-gray-500 dark:text-gray-400"></p>}
         </div>
-        <input id="dropzone-file" type="file" className="hidden" onChange={handleFileChange} />
+        <input
+          id="dropzone-file"
+          type="file"
+          className="hidden"
+          accept={`${fileType}`}
+          onChange={handleOnChange}
+          />
       </label>
     </div>
   );
