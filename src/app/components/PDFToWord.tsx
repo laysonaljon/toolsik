@@ -26,7 +26,7 @@ const PDFToWord = () => {
 
   return (
     <>
-    <section className="section-padding section__bg ">
+    <section className="section-padding section__bg " id="pdf2word">
         <div className="justify-center text-center m-5">
             <h2 className="text-5xl font-bold mb-10 text-center gradient__text">Convert your PDF</h2>
         </div>

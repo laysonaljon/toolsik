@@ -11,7 +11,8 @@ const Pdf2Word = () => {
         title="PDF to Word Converter"
         description="From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack." 
         image= {pdf2word}
-        buttonText="Convert PDF to Word"      
+        buttonText="Convert PDF to Word"  
+        section="pdf2word"    
     />
     
     <div className="grid grid-cols-1 m-5">

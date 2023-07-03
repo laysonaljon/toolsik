@@ -16,11 +16,14 @@ const Pdf2Word = () => {
         description="From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
         image={qrgen}
         buttonText="Try to Generate QR Code"
+        section="qr"
       />
-
+      
       <div className="grid grid-cols-1 m-5">
         <LinkToQR />
       </div>
+
+      
     </>
   );
 };

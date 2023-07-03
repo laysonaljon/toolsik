@@ -64,7 +64,7 @@ const LinkToQR = () => {
   }
 
   return (
-    <section className="section-padding section__bg">
+    <section className="section-padding section__bg" id="qr">
       <div className="justify-center text-center m-5">
         <h2 className="text-5xl font-bold mb-10 text-center gradient__text">Link to QR</h2>
       </div>

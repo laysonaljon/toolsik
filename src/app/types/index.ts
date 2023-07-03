@@ -25,6 +25,7 @@ export interface HeroProps {
     description: string
     buttonText?: string
     image:string | StaticImageData
+    section: string
 
 }
 

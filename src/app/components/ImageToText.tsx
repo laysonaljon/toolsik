@@ -58,7 +58,7 @@ const ImageToText = () => {
 
 
   return (
-    <section className="section-padding section__bg ">
+    <section className="section-padding section__bg" id="img2txt">
         <div className="justify-center text-center m-5">
             <h2 className="text-5xl font-bold mb-10 text-center gradient__text">Gets words in image!</h2>
         </div>

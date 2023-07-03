@@ -263,6 +263,20 @@ a {
   flex-direction: row;
 }
 
+.toolsik__section__full {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolsik__section__hero {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .toolsik__header-content {
   flex: 1;
   display: flex;
@@ -338,8 +352,8 @@ a {
 }
 
 .toolsik__header-image img {
-  width: 100%;
-  height: 100%;
+  width: 75%;
+  height: 75%;
 }
 
 @media screen and (max-width: 1050px) {
@@ -414,7 +428,6 @@ a {
   width: 100%;
   height: 100%;
   border-radius: 0.5rem/* 8px */;
-  margin: 0.75rem/* 12px */;
   flex-direction: column;
   align-items: center;
   padding: 1.5rem/* 24px */;

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const ToolCard: React.FC<ToolCardProps> = ({ name, description, image, link }) => {
   return (
-    <section className="flex m-5 p-5">
+    <section className="flex-4 m-5">
       <div className="toolsik__toolcard-container shadow-md">
         <div className="mb-4">
           <Image src={image} alt={name} width={200} height={200} />
