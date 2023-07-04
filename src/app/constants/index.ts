@@ -1,5 +1,5 @@
 
-import { pdf2word,qrgen,img2text, ytdl } from "../assets";
+import { pdf2word,qrgen,img2text } from "../assets";
 
 export const tools = [
     {

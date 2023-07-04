@@ -16,5 +16,4 @@ export{
     Upload,
     ImageToText,
     LinkToQR
-
 }
